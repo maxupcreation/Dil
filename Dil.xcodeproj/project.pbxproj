@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C8F68092680ADF200B13CF4 /* AddPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F68082680ADF200B13CF4 /* AddPlayerView.xib */; };
+		9CC1F41626820FFC00C20B63 /* addPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC1F41426820FFC00C20B63 /* addPlayerViewController.swift */; };
+		9CC1F41726820FFC00C20B63 /* addPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1F41526820FFC00C20B63 /* addPlayerViewController.xib */; };
 		9CCF0FD626796A2F009BD8EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF0FD526796A2F009BD8EC /* AppDelegate.swift */; };
 		9CCF0FD826796A2F009BD8EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF0FD726796A2F009BD8EC /* SceneDelegate.swift */; };
 		9CCF0FDA26796A2F009BD8EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF0FD926796A2F009BD8EC /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 		9CCF0FFB26796A30009BD8EC /* DilUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF0FFA26796A30009BD8EC /* DilUITests.swift */; };
 		9CCF100926796B27009BD8EC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF100826796B27009BD8EC /* CoreDataStack.swift */; };
 		9CCF100B267971CF009BD8EC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF100A267971CF009BD8EC /* CoreDataManager.swift */; };
+		9CDB000E2682229800F08A6F /* AnimatedGradientView in Frameworks */ = {isa = PBXBuildFile; productRef = 9CDB000D2682229800F08A6F /* AnimatedGradientView */; };
 		9CED470426797A61000FB729 /* CellPlayerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CED470326797A61000FB729 /* CellPlayerViewCell.xib */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9C8F68082680ADF200B13CF4 /* AddPlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPlayerView.xib; sourceTree = "<group>"; };
+		9CC1F41426820FFC00C20B63 /* addPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPlayerViewController.swift; sourceTree = "<group>"; };
+		9CC1F41526820FFC00C20B63 /* addPlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addPlayerViewController.xib; sourceTree = "<group>"; };
 		9CCF0FD226796A2F009BD8EC /* Dil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CCF0FD526796A2F009BD8EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CCF0FD726796A2F009BD8EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDB000E2682229800F08A6F /* AnimatedGradientView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				9CCF0FDB26796A2F009BD8EC /* Main.storyboard */,
-				9C8F68082680ADF200B13CF4 /* AddPlayerView.xib */,
 				9CED470326797A61000FB729 /* CellPlayerViewCell.xib */,
 				9CCF0FE326796A30009BD8EC /* LaunchScreen.storyboard */,
 			);
@@ -171,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				9CCF0FD926796A2F009BD8EC /* ViewController.swift */,
+				9CC1F41426820FFC00C20B63 /* addPlayerViewController.swift */,
+				9CC1F41526820FFC00C20B63 /* addPlayerViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,6 +196,9 @@
 			dependencies = (
 			);
 			name = Dil;
+			packageProductDependencies = (
+				9CDB000D2682229800F08A6F /* AnimatedGradientView */,
+			);
 			productName = Dil;
 			productReference = 9CCF0FD226796A2F009BD8EC /* Dil.app */;
 			productType = "com.apple.product-type.application";
@@ -262,6 +270,9 @@
 				Base,
 			);
 			mainGroup = 9CCF0FC926796A2F009BD8EC;
+			packageReferences = (
+				9CDB000C2682229800F08A6F /* XCRemoteSwiftPackageReference "AnimatedGradientView" */,
+			);
 			productRefGroup = 9CCF0FD326796A2F009BD8EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -281,8 +292,8 @@
 				9CCF0FE526796A30009BD8EC /* LaunchScreen.storyboard in Resources */,
 				9CCF0FE226796A30009BD8EC /* Assets.xcassets in Resources */,
 				9CCF0FDD26796A2F009BD8EC /* Main.storyboard in Resources */,
-				9C8F68092680ADF200B13CF4 /* AddPlayerView.xib in Resources */,
 				9CED470426797A61000FB729 /* CellPlayerViewCell.xib in Resources */,
+				9CC1F41726820FFC00C20B63 /* addPlayerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CCF100B267971CF009BD8EC /* CoreDataManager.swift in Sources */,
+				9CC1F41626820FFC00C20B63 /* addPlayerViewController.swift in Sources */,
 				9CCF100926796B27009BD8EC /* CoreDataStack.swift in Sources */,
 				9CCF0FDA26796A2F009BD8EC /* ViewController.swift in Sources */,
 				9CCF0FE026796A2F009BD8EC /* Dil.xcdatamodeld in Sources */,
@@ -645,6 +657,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9CDB000C2682229800F08A6F /* XCRemoteSwiftPackageReference "AnimatedGradientView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rwbutler/AnimatedGradientView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9CDB000D2682229800F08A6F /* AnimatedGradientView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CDB000C2682229800F08A6F /* XCRemoteSwiftPackageReference "AnimatedGradientView" */;
+			productName = AnimatedGradientView;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9CCF0FDE26796A2F009BD8EC /* Dil.xcdatamodeld */ = {
