@@ -6,9 +6,9 @@
 //
 
 import UIKit
-import AnimatedGradientView
 
 class ViewController: UIViewController {
+    @IBOutlet weak var addPlayersButtonOutlet: UIButton!
     
     //MARK:- OutLet 🔗
     @IBOutlet weak var playersStackView: UIStackView!
@@ -42,9 +42,7 @@ class ViewController: UIViewController {
     //MARK:- Button Action 🔴
     
     @IBAction func addPlayers(_ sender: Any) {
-        
-        let viewController = UIViewController(nibName: "addPlayerViewController", bundle: nil)
-        self.navigationController?.pushViewController(viewController,animated:true)
+        self.performSegue(withIdentifier: "homeToAddPlayer", sender: (Any).self)
     }
     
     
@@ -66,18 +64,11 @@ class ViewController: UIViewController {
     //MARK:- Animate ⚡️
     
     func getRandomColor() {
-        let animatedGradient = AnimatedGradientView(frame: view.bounds)
-        animatedGradient.direction = .downLeft
-        animatedGradient.animationValues = [(colors: ["#9b5de5", "#f15bb5"], .up, .radial),
-        (colors: ["#fee440", "#00bbf9", "#00f5d4"], .right, .axial),
-        (colors: ["#9b5de5", "#f15bb5"], .down, .radial),
-        (colors: ["#fee440", "#00bbf9", "#00f5d4"], .left, .axial)]
-        view.insertSubview(animatedGradient, at:0)
-        }
+     
     }
 
 
 //MARK:- Extension ↔️
 
 
-
+}
