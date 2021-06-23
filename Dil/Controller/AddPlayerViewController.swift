@@ -14,13 +14,19 @@ final class AddPlayerViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var pseudoTextField: UITextField!
     @IBOutlet weak var addPlayer: UIButton!
     
+    var coreDataManager : CoreDataManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        addButtonManagerRefresh()
+        
         addPictureButton.setTitle("Prendre une photo", for: .normal)
         addPictureButton.titleLabel?.textAlignment = .center
         addPlayer.layer.masksToBounds = true
         addPlayer.layer.cornerRadius = CGFloat(10)
+        
     }
     
     @IBAction func didTapButton(_ sender: Any) {
@@ -30,11 +36,33 @@ final class AddPlayerViewController: UIViewController,UITextFieldDelegate {
         present(picker, animated: true)
     }
     
+    @IBAction func didTapAddPlayerButton(_ sender: Any) {
+        
+        let image = addPictureButton.imageView?.image ?? UIImage()
+        let pseudo = pseudoTextField.text ?? ""
+     
+        if pseudo != "" {
+        coreDataManager?.savePlayer(pseudo: pseudo, image: image)
+        }
+    }
+    
+    func addButtonManagerRefresh(){
+        
+        if pseudoTextField.text == "" {
+            addPlayer.isEnabled = false
+            addPlayer.alpha = 0.5
+        } else {
+            addPlayer.isEnabled = true
+            addPlayer.alpha = 1
+        }
+    }
+    
     //MARK:- KeyBoard Gestion ⌨️
     
      
      func textFieldShouldReturn(_ textField: UITextField) -> Bool {
          pseudoTextField.resignFirstResponder()
+         addButtonManagerRefresh()
          return true
      }
      

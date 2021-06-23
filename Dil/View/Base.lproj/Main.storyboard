@@ -138,6 +138,10 @@
                                         <state key="normal" title="Ajouter">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didTapAddPlayerButton:" destination="tLM-zd-zkt" eventType="touchUpInside" id="C2J-vf-hde"/>
+                                            <segue destination="ahZ-I7-qH7" kind="unwind" unwindAction="unwindToWelcomeWithSegue:" id="HxI-RQ-zcH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -158,6 +162,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uF4-27-hsT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ahZ-I7-qH7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="795" y="-525"/>
         </scene>
