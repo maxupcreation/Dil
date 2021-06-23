@@ -7,18 +7,16 @@
 
 import UIKit
 
-final class AddPlayerViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+final class AddPlayerViewController: UIViewController {
     
     
     @IBOutlet weak var addPictureButton: UIButton!
     @IBOutlet weak var pseudoTextField: UITextField!
     @IBOutlet weak var addPlayer: UIButton!
     
-   var imageView = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addPictureButton.setBackgroundImage(imageView.image ?? UIImage(), for: .normal)
         
     }
     
@@ -33,17 +31,26 @@ final class AddPlayerViewController: UIViewController, UIImagePickerControllerDe
 
 
 
-extension AddPlayerViewController {
-    func imagePickerControllerDidCancel(_ picker:UIImagePickerController){
+extension AddPlayerViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    
+func imagePickerControllerDidCancel(_ picker:UIImagePickerController){
+    picker.dismiss(animated: true, completion: nil)
+}
+    
+   func imagePickerController(_ picker:UIImagePickerController,
+                              didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        
         picker.dismiss(animated: true, completion: nil)
-        func imagePickerController(_picker:UIImagePickerController,
-                                   didFinishpickingMediawithInfo info: [UIImagePickerController.InfoKey: Any]) {
-            picker.dismiss(animated: true, completion: nil)
-            
-            guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
+        
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
             return
-            }
-            self.imageView.image = image
         }
+        
+        addPictureButton.setBackgroundImage(image, for: .normal)
+        
     }
 }
+
+
+
