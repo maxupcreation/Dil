@@ -26,6 +26,19 @@ final class CoreDataManager {
     
     // MARK: - Manage func Entity
     
+    func savePlayer(pseudo:String,image:UIImage){
+        let playerI = Players(context: managedObjectContext)
+        playerI.picture = image.pngData()
+        playerI.pseudo = pseudo
+        coreDataStack.saveContext()
+    }
+    
+    
+    
+    
+    
+    
+    
 //    // Ajout dans CoreData
 //
 //func createFavorite(label: String, image: UIImage) {

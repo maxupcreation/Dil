@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class AddPlayerViewController: UIViewController {
+final class AddPlayerViewController: UIViewController,UITextFieldDelegate {
     
     
     @IBOutlet weak var addPictureButton: UIButton!
@@ -17,7 +17,10 @@ final class AddPlayerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addPictureButton.setTitle("Prendre une photo", for: .normal)
+        addPictureButton.titleLabel?.textAlignment = .center
+        addPlayer.layer.masksToBounds = true
+        addPlayer.layer.cornerRadius = CGFloat(10)
     }
     
     @IBAction func didTapButton(_ sender: Any) {
@@ -26,6 +29,15 @@ final class AddPlayerViewController: UIViewController {
         picker.delegate = self
         present(picker, animated: true)
     }
+    
+    //MARK:- KeyBoard Gestion ⌨️
+    
+     
+     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+         pseudoTextField.resignFirstResponder()
+         return true
+     }
+     
     
 }
 
@@ -47,8 +59,13 @@ func imagePickerControllerDidCancel(_ picker:UIImagePickerController){
             return
         }
         
-        addPictureButton.setBackgroundImage(image, for: .normal)
-        
+       addPictureButton.setImage(image, for: .normal)
+       addPictureButton.imageView?.contentMode = UIView.ContentMode.scaleAspectFill
+       addPictureButton.layer.masksToBounds = true
+       addPictureButton.layer.cornerRadius = 10
+     
+       addPictureButton.titleLabel?.text = ""
+
     }
 }
 
