@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C3E62A02684C60F004805FD /* UImage+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E629F2684C60F004805FD /* UImage+Rotate.swift */; };
+		9C3E62A22684CA73004805FD /* UIImageView+RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E62A12684CA73004805FD /* UIImageView+RoundedImage.swift */; };
+		9C3E62A42684F565004805FD /* CellPlayerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E62A32684F565004805FD /* CellPlayerViewCell.xib */; };
 		9CA143582684829F006D0A45 /* PlayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA143572684829F006D0A45 /* PlayersTableViewCell.swift */; };
 		9CC1F41626820FFC00C20B63 /* AddPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC1F41426820FFC00C20B63 /* AddPlayerViewController.swift */; };
 		9CCF0FD626796A2F009BD8EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF0FD526796A2F009BD8EC /* AppDelegate.swift */; };
@@ -20,7 +23,6 @@
 		9CCF0FFB26796A30009BD8EC /* DilUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF0FFA26796A30009BD8EC /* DilUITests.swift */; };
 		9CCF100926796B27009BD8EC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF100826796B27009BD8EC /* CoreDataStack.swift */; };
 		9CCF100B267971CF009BD8EC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF100A267971CF009BD8EC /* CoreDataManager.swift */; };
-		9CED470426797A61000FB729 /* CellPlayerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CED470326797A61000FB729 /* CellPlayerViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C3E629F2684C60F004805FD /* UImage+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UImage+Rotate.swift"; sourceTree = "<group>"; };
+		9C3E62A12684CA73004805FD /* UIImageView+RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+RoundedImage.swift"; sourceTree = "<group>"; };
+		9C3E62A32684F565004805FD /* CellPlayerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellPlayerViewCell.xib; sourceTree = "<group>"; };
 		9CA143572684829F006D0A45 /* PlayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersTableViewCell.swift; sourceTree = "<group>"; };
 		9CC1F41426820FFC00C20B63 /* AddPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerViewController.swift; sourceTree = "<group>"; };
 		9CCF0FD226796A2F009BD8EC /* Dil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dil.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,7 +65,6 @@
 		9CCF0FFC26796A30009BD8EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CCF100826796B27009BD8EC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		9CCF100A267971CF009BD8EC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		9CED470326797A61000FB729 /* CellPlayerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellPlayerViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C3E629E2684C5E5004805FD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9C3E629F2684C60F004805FD /* UImage+Rotate.swift */,
+				9C3E62A12684CA73004805FD /* UIImageView+RoundedImage.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		9CCF0FC926796A2F009BD8EC = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +124,7 @@
 		9CCF0FD426796A2F009BD8EC /* Dil */ = {
 			isa = PBXGroup;
 			children = (
+				9C3E629E2684C5E5004805FD /* Extension */,
 				9CCF100C26797217009BD8EC /* Model */,
 				9CCF100E2679725B009BD8EC /* View */,
 				9CCF100F26797272009BD8EC /* Controller */,
@@ -163,7 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				9CCF0FDB26796A2F009BD8EC /* Main.storyboard */,
-				9CED470326797A61000FB729 /* CellPlayerViewCell.xib */,
+				9C3E62A32684F565004805FD /* CellPlayerViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -288,7 +302,7 @@
 				9CCF0FE526796A30009BD8EC /* LaunchScreen.storyboard in Resources */,
 				9CCF0FE226796A30009BD8EC /* Assets.xcassets in Resources */,
 				9CCF0FDD26796A2F009BD8EC /* Main.storyboard in Resources */,
-				9CED470426797A61000FB729 /* CellPlayerViewCell.xib in Resources */,
+				9C3E62A42684F565004805FD /* CellPlayerViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,12 +327,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C3E62A22684CA73004805FD /* UIImageView+RoundedImage.swift in Sources */,
 				9CA143582684829F006D0A45 /* PlayersTableViewCell.swift in Sources */,
 				9CCF100B267971CF009BD8EC /* CoreDataManager.swift in Sources */,
 				9CC1F41626820FFC00C20B63 /* AddPlayerViewController.swift in Sources */,
 				9CCF100926796B27009BD8EC /* CoreDataStack.swift in Sources */,
 				9CCF0FDA26796A2F009BD8EC /* ViewController.swift in Sources */,
 				9CCF0FE026796A2F009BD8EC /* Dil.xcdatamodeld in Sources */,
+				9C3E62A02684C60F004805FD /* UImage+Rotate.swift in Sources */,
 				9CCF0FD626796A2F009BD8EC /* AppDelegate.swift in Sources */,
 				9CCF0FD826796A2F009BD8EC /* SceneDelegate.swift in Sources */,
 			);

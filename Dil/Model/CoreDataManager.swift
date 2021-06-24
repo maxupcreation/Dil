@@ -28,7 +28,9 @@ final class CoreDataManager {
     
     func savePlayer(pseudo:String,image:UIImage){
         let playerI = Players(context: managedObjectContext)
-        playerI.picture = image.pngData()
+        let data = image.jpegData(compressionQuality: 0.5)
+        playerI.picture = data
+       
         playerI.pseudo = pseudo
         coreDataStack.saveContext()
     }

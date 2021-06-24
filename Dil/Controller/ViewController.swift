@@ -19,11 +19,27 @@ class ViewController: UIViewController {
     //MARK:- Propreties 📦
     
     //MARK:- View Cycle ♻️
+    
+    override func viewWillLayoutSubviews() {
+        tableView.reloadData()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
+override func viewWillAppear(_ animated: Bool) {
+    tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        getRandomColor()
+        addPlayersButtonOutlet.layer.zPosition = 1
         
         //— 💡 Supprimer la barre du haut
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -32,8 +48,7 @@ class ViewController: UIViewController {
         
         playersStackView.layer.masksToBounds = true
         playersStackView.layer.cornerRadius = CGFloat(10)
-        
-        setupCustomCell()
+//
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
               coreDataManager = CoreDataManager(coreDataStack: appDelegate.coreDataStack)
@@ -52,6 +67,7 @@ class ViewController: UIViewController {
     
     @IBAction func addPlayers(_ sender: Any) {
         self.performSegue(withIdentifier: "homeToAddPlayer", sender: (Any).self)
+        tableView.reloadData()
     }
     
 
@@ -66,7 +82,9 @@ class ViewController: UIViewController {
     
     //MARK:- Animate ⚡️
     
-    func getRandomColor() {
+    func animateStackView() {
+        
+        
      
     }
     @IBAction func unwindToWelcome(segue:UIStoryboardSegue) { }
@@ -96,13 +114,26 @@ extension ViewController: UITableViewDataSource{
         cell.configure(data: playersData ?? Players())
         
         
+        let translationMovement = CATransform3DTranslate(CATransform3DIdentity, 0, 20, 0)
+        cell.layer.transform = translationMovement
+            cell.alpha = 0
+            
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 20, initialSpringVelocity: 2, options: .curveEaseIn) {
+            
+                cell.layer.transform = CATransform3DIdentity
+                cell.alpha = 1
+                
+            }
+            
+            cell.selectionStyle = .none
+        
+        
         return cell
     }
-    //— 💡 Allows you to assign the custom cell (XIB) to the desired tableView.
-        
-        private func setupCustomCell() {
-            let nib = UINib(nibName: "PlayersTableViewCell", bundle: nil)
-            tableView.register(nib, forCellReuseIdentifier: "cell")
-        }
+//    //— 💡 Allows you to assign the custom cell (XIB) to the desired tableView.
+//        private func setupCustomCell() {
+//            let nib = UINib(nibName: "PlayersTableViewCell", bundle: nil)
+//            tableView.register(nib, forCellReuseIdentifier: "cell")
+//        }
     
 }

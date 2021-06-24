@@ -24,10 +24,15 @@ class PlayersTableViewCell: UITableViewCell {
     }
 
 func configure(data:Players){
-    pictureImageVIew.image = UIImage(data: data.picture ?? Data()) ?? UIImage()
-    pseudoLabel.text = data.pseudo
-    capacityLabel.text = data.capacity?.first
-    ScoreLabel.text = String(data.score)
+        self.pictureImageVIew.image = self.pictureImageVIew.image?.rotate(radians: 1.56)
+        self.pictureImageVIew.image = UIImage(data: data.picture ?? Data()) ?? UIImage()
+        self.pictureImageVIew.layer.masksToBounds = true
+        self.pictureImageVIew.layer.cornerRadius = CGFloat(10)
+        self.pictureImageVIew.contentMode = .scaleAspectFill
+        self.pseudoLabel.text = data.pseudo
+        self.capacityLabel.text = data.capacity?.first
+        self.ScoreLabel.text = String(data.score)
+  
 }
     
     

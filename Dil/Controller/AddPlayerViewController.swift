@@ -46,6 +46,7 @@ final class AddPlayerViewController: UIViewController,UITextFieldDelegate {
         if pseudo != "" {
         coreDataManager?.savePlayer(pseudo: pseudo, image: image)
         }
+        
     }
     
     func addButtonManagerRefresh(){
