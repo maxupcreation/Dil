@@ -14,11 +14,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var playersStackView: UIStackView!
     @IBOutlet weak var tableView: UITableView!
     
+    var coreDataManager: CoreDataManager?
+    
     //MARK:- Propreties 📦
     
     //MARK:- View Cycle ♻️
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         getRandomColor()
         
         //— 💡 Supprimer la barre du haut
@@ -30,6 +34,11 @@ class ViewController: UIViewController {
         playersStackView.layer.cornerRadius = CGFloat(10)
         
         setupCustomCell()
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+              coreDataManager = CoreDataManager(coreDataStack: appDelegate.coreDataStack)
+        
+        tableView.reloadData()
         
     }
     //MARK:- override 🧗
@@ -45,13 +54,7 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: "homeToAddPlayer", sender: (Any).self)
     }
     
-    
-    //— 💡 Allows you to assign the custom cell (XIB) to the desired tableView.
-    
-    private func setupCustomCell() {
-        let nib = UINib(nibName: "playerCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "tableViewCell")
-    }
+
     
     //MARK:- Conditions☝🏻
     
@@ -71,4 +74,35 @@ class ViewController: UIViewController {
 //MARK:- Extension ↔️
 
 
+}
+
+extension ViewController: UITableViewDataSource{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return coreDataManager?.players.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? PlayersTableViewCell else { return UITableViewCell() }
+        
+        
+        let playersData = coreDataManager?.players[indexPath.row]
+        
+        cell.configure(data: playersData ?? Players())
+        
+        
+        return cell
+    }
+    //— 💡 Allows you to assign the custom cell (XIB) to the desired tableView.
+        
+        private func setupCustomCell() {
+            let nib = UINib(nibName: "PlayersTableViewCell", bundle: nil)
+            tableView.register(nib, forCellReuseIdentifier: "cell")
+        }
+    
 }

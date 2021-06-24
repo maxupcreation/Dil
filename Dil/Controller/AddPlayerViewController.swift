@@ -19,6 +19,8 @@ final class AddPlayerViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        coreDataManager = CoreDataManager(coreDataStack: appDelegate.coreDataStack)
         
         addButtonManagerRefresh()
         
@@ -91,7 +93,6 @@ func imagePickerControllerDidCancel(_ picker:UIImagePickerController){
        addPictureButton.imageView?.contentMode = UIView.ContentMode.scaleAspectFill
        addPictureButton.layer.masksToBounds = true
        addPictureButton.layer.cornerRadius = 10
-     
        addPictureButton.titleLabel?.text = ""
 
     }

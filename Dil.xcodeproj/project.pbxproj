@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9CA143582684829F006D0A45 /* PlayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA143572684829F006D0A45 /* PlayersTableViewCell.swift */; };
 		9CC1F41626820FFC00C20B63 /* AddPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC1F41426820FFC00C20B63 /* AddPlayerViewController.swift */; };
 		9CCF0FD626796A2F009BD8EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF0FD526796A2F009BD8EC /* AppDelegate.swift */; };
 		9CCF0FD826796A2F009BD8EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF0FD726796A2F009BD8EC /* SceneDelegate.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9CA143572684829F006D0A45 /* PlayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersTableViewCell.swift; sourceTree = "<group>"; };
 		9CC1F41426820FFC00C20B63 /* AddPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerViewController.swift; sourceTree = "<group>"; };
 		9CCF0FD226796A2F009BD8EC /* Dil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CCF0FD526796A2F009BD8EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				9CCF0FD926796A2F009BD8EC /* ViewController.swift */,
 				9CC1F41426820FFC00C20B63 /* AddPlayerViewController.swift */,
+				9CA143572684829F006D0A45 /* PlayersTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA143582684829F006D0A45 /* PlayersTableViewCell.swift in Sources */,
 				9CCF100B267971CF009BD8EC /* CoreDataManager.swift in Sources */,
 				9CC1F41626820FFC00C20B63 /* AddPlayerViewController.swift in Sources */,
 				9CCF100926796B27009BD8EC /* CoreDataStack.swift in Sources */,

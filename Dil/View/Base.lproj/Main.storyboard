@@ -53,21 +53,31 @@
                                             <action selector="addPlayers:" destination="3oN-WH-jiq" eventType="touchUpInside" id="DEw-LY-L1u"/>
                                         </connections>
                                     </button>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6fR-Ug-bHo">
+                                    <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6fR-Ug-bHo">
                                         <rect key="frame" x="0.0" y="60" width="290" height="387"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Lnt-kJ-AL0">
-                                                <rect key="frame" x="0.0" y="50" width="290" height="44"/>
+                                                <rect key="frame" x="0.0" y="50" width="290" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lnt-kJ-AL0" id="6EQ-iD-FoM">
-                                                    <rect key="frame" x="0.0" y="0.0" width="290" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="290" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="3oN-WH-jiq" id="dKs-FI-JKX"/>
+                                            <outlet property="delegate" destination="3oN-WH-jiq" id="gJU-Yk-zNj"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="6fR-Ug-bHo" firstAttribute="top" secondItem="RUe-sk-yg9" secondAttribute="bottom" id="3wW-kY-QPP"/>
+                                    <constraint firstAttribute="bottom" secondItem="6fR-Ug-bHo" secondAttribute="bottom" id="ADC-Xv-IU9"/>
+                                    <constraint firstAttribute="trailing" secondItem="6fR-Ug-bHo" secondAttribute="trailing" id="Gld-ot-CAR"/>
+                                    <constraint firstItem="6fR-Ug-bHo" firstAttribute="leading" secondItem="2yZ-am-SAC" secondAttribute="leading" id="ddF-o5-Z99"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P16-cU-dd6"/>
