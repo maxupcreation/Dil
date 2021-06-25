@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="21A5248p" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19141.11" systemVersion="21A5248p" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Challenges" representedClassName="Challenges" syncable="YES" codeGenerationType="class">
+        <attribute name="bigChallenge" optional="YES" attributeType="Transformable" customClassName=".[String]"/>
+        <attribute name="littleChallenges" optional="YES" attributeType="Transformable" customClassName=".[String]"/>
+    </entity>
     <entity name="Players" representedClassName="Players" syncable="YES" codeGenerationType="class">
         <attribute name="capacity" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName=".[String]"/>
         <attribute name="picture" optional="YES" attributeType="Binary"/>
@@ -8,5 +12,6 @@
     </entity>
     <elements>
         <element name="Players" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="Challenges" positionX="-63" positionY="9" width="128" height="59"/>
     </elements>
 </model>

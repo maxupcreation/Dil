@@ -17,6 +17,8 @@ final class CoreDataManager {
     }
     
     
+    
+    
     // MARK: - Initializer
     
     init(coreDataStack: CoreDataStack) {
@@ -35,7 +37,11 @@ final class CoreDataManager {
         coreDataStack.saveContext()
     }
     
-    
+    func deletePlayer(indexPath : IndexPath){
+        let player = players[indexPath.row]
+        managedObjectContext.delete(player)
+        coreDataStack.saveContext()
+    }
     
     
     

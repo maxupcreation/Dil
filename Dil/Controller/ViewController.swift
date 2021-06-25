@@ -130,10 +130,11 @@ extension ViewController: UITableViewDataSource{
         
         return cell
     }
-//    //— 💡 Allows you to assign the custom cell (XIB) to the desired tableView.
-//        private func setupCustomCell() {
-//            let nib = UINib(nibName: "PlayersTableViewCell", bundle: nil)
-//            tableView.register(nib, forCellReuseIdentifier: "cell")
-//        }
+func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    if editingStyle == .delete {
+        coreDataManager?.deletePlayer(indexPath : indexPath)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+}
     
 }

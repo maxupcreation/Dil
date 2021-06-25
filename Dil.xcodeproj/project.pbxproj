@@ -10,6 +10,8 @@
 		9C3E62A02684C60F004805FD /* UImage+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E629F2684C60F004805FD /* UImage+Rotate.swift */; };
 		9C3E62A22684CA73004805FD /* UIImageView+RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E62A12684CA73004805FD /* UIImageView+RoundedImage.swift */; };
 		9C3E62A42684F565004805FD /* CellPlayerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E62A32684F565004805FD /* CellPlayerViewCell.xib */; };
+		9C3E62A62685E0FC004805FD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E62A52685E0FC004805FD /* GameViewController.swift */; };
+		9C3E62A8268609CD004805FD /* Capacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E62A7268609CD004805FD /* Capacity.swift */; };
 		9CA143582684829F006D0A45 /* PlayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA143572684829F006D0A45 /* PlayersTableViewCell.swift */; };
 		9CC1F41626820FFC00C20B63 /* AddPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC1F41426820FFC00C20B63 /* AddPlayerViewController.swift */; };
 		9CCF0FD626796A2F009BD8EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF0FD526796A2F009BD8EC /* AppDelegate.swift */; };
@@ -46,6 +48,8 @@
 		9C3E629F2684C60F004805FD /* UImage+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UImage+Rotate.swift"; sourceTree = "<group>"; };
 		9C3E62A12684CA73004805FD /* UIImageView+RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+RoundedImage.swift"; sourceTree = "<group>"; };
 		9C3E62A32684F565004805FD /* CellPlayerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellPlayerViewCell.xib; sourceTree = "<group>"; };
+		9C3E62A52685E0FC004805FD /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		9C3E62A7268609CD004805FD /* Capacity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capacity.swift; sourceTree = "<group>"; };
 		9CA143572684829F006D0A45 /* PlayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersTableViewCell.swift; sourceTree = "<group>"; };
 		9CC1F41426820FFC00C20B63 /* AddPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerViewController.swift; sourceTree = "<group>"; };
 		9CCF0FD226796A2F009BD8EC /* Dil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dil.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +161,7 @@
 				9CCF0FDE26796A2F009BD8EC /* Dil.xcdatamodeld */,
 				9CCF100A267971CF009BD8EC /* CoreDataManager.swift */,
 				9CCF100826796B27009BD8EC /* CoreDataStack.swift */,
+				9C3E62A7268609CD004805FD /* Capacity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				9CCF0FD926796A2F009BD8EC /* ViewController.swift */,
 				9CC1F41426820FFC00C20B63 /* AddPlayerViewController.swift */,
 				9CA143572684829F006D0A45 /* PlayersTableViewCell.swift */,
+				9C3E62A52685E0FC004805FD /* GameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -330,12 +336,14 @@
 				9C3E62A22684CA73004805FD /* UIImageView+RoundedImage.swift in Sources */,
 				9CA143582684829F006D0A45 /* PlayersTableViewCell.swift in Sources */,
 				9CCF100B267971CF009BD8EC /* CoreDataManager.swift in Sources */,
+				9C3E62A8268609CD004805FD /* Capacity.swift in Sources */,
 				9CC1F41626820FFC00C20B63 /* AddPlayerViewController.swift in Sources */,
 				9CCF100926796B27009BD8EC /* CoreDataStack.swift in Sources */,
 				9CCF0FDA26796A2F009BD8EC /* ViewController.swift in Sources */,
 				9CCF0FE026796A2F009BD8EC /* Dil.xcdatamodeld in Sources */,
 				9C3E62A02684C60F004805FD /* UImage+Rotate.swift in Sources */,
 				9CCF0FD626796A2F009BD8EC /* AppDelegate.swift in Sources */,
+				9C3E62A62685E0FC004805FD /* GameViewController.swift in Sources */,
 				9CCF0FD826796A2F009BD8EC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
