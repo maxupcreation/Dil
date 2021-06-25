@@ -30,9 +30,9 @@ func configure(data:Players){
         self.pictureImageVIew.layer.cornerRadius = CGFloat(10)
         self.pictureImageVIew.contentMode = .scaleAspectFill
         self.pseudoLabel.text = data.pseudo
-        self.capacityLabel.text = data.capacity?.first
+        self.capacityLabel.text = data.capacity ?? ""
         self.ScoreLabel.text = String(data.score)
-  
+    
 }
     
     

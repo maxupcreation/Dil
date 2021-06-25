@@ -11,6 +11,7 @@ class GameViewController: UIViewController {
     
     //MARK:- OutLet 🔗
     
+    @IBOutlet weak var turnLabel: UILabel!
     @IBOutlet weak var pictureImageView: UIImageView!
     @IBOutlet weak var pseudoLabel: UILabel!
     @IBOutlet weak var capacityLabel: UILabel!
@@ -26,19 +27,19 @@ class GameViewController: UIViewController {
     
     //MARK:- Propreties 📦
     
-    var coreDataManager : CoreDataManager?
-
+    var dataSeguePlayer : [Players]?
+    let turn = 0
+    
     //MARK:- View Cycle ♻️
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-              coreDataManager = CoreDataManager(coreDataStack: appDelegate.coreDataStack)
+        playerManager()
+        
         
     }
-
+    
     //MARK:- Button Action 🔴
     @IBAction func didTapLittleChallenge(_ sender: Any) {
         
@@ -49,24 +50,37 @@ class GameViewController: UIViewController {
     }
     
     //MARK:- override 🧗
-
-    //MARK:- Conditions☝🏻
     
-    func gameGestion(){
+    //MARK:- Conditions☝🏻
+    func playerManager(){
+        pseudoLabel.text = dataSeguePlayer?[turn].pseudo ?? "noData"
+        scoreLabel.text = String(dataSeguePlayer?[turn].score ?? 0)
+        capacityLabel.text = dataSeguePlayer?[turn].capacity ?? ""
+        pictureImageView.image = UIImage(data: dataSeguePlayer?[turn].picture ?? Data())
+    }
+    
+    func gameManager(){
+        
+        turnLabel.text = String(turn)
+        
+        if turn == 1 {
+            
+        }
+        
         
     }
-
-    //MARK:- Interface Gestion 📱
-
-    //MARK:- Others Func 🍱
-
-    //MARK:- KeyBoard Gestion ⌨️
-
-    //MARK:- Animate ⚡️
-
-    //MARK:- Extension ↔️
-
- 
     
-
+    //MARK:- Interface Gestion 📱
+    
+    //MARK:- Others Func 🍱
+    
+    //MARK:- KeyBoard Gestion ⌨️
+    
+    //MARK:- Animate ⚡️
+    
+    //MARK:- Extension ↔️
+    
+    
+    
+    
 }

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var coreDataManager: CoreDataManager?
+    var dataSegue : [Players]?
     
     //MARK:- Propreties 📦
     
@@ -39,6 +40,8 @@ override func viewWillAppear(_ animated: Bool) {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+  
+        
         addPlayersButtonOutlet.layer.zPosition = 1
         
         //— 💡 Supprimer la barre du haut
@@ -62,6 +65,13 @@ override func viewWillAppear(_ animated: Bool) {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         if let recipesVC = segue.destination as? GameViewController {
+             recipesVC.dataSeguePlayer = dataSegue
+         }
+     }
+ 
     
     //MARK:- Button Action 🔴
     
@@ -105,6 +115,9 @@ extension ViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        dataSegue = coreDataManager?.players
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? PlayersTableViewCell else { return UITableViewCell() }
         

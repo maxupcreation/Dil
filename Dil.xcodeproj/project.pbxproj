@@ -12,6 +12,7 @@
 		9C3E62A42684F565004805FD /* CellPlayerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E62A32684F565004805FD /* CellPlayerViewCell.xib */; };
 		9C3E62A62685E0FC004805FD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E62A52685E0FC004805FD /* GameViewController.swift */; };
 		9C3E62A8268609CD004805FD /* Capacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E62A7268609CD004805FD /* Capacity.swift */; };
+		9C3E62AA26862AA2004805FD /* Challenges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E62A926862AA2004805FD /* Challenges.swift */; };
 		9CA143582684829F006D0A45 /* PlayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA143572684829F006D0A45 /* PlayersTableViewCell.swift */; };
 		9CC1F41626820FFC00C20B63 /* AddPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC1F41426820FFC00C20B63 /* AddPlayerViewController.swift */; };
 		9CCF0FD626796A2F009BD8EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF0FD526796A2F009BD8EC /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 		9C3E62A32684F565004805FD /* CellPlayerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellPlayerViewCell.xib; sourceTree = "<group>"; };
 		9C3E62A52685E0FC004805FD /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		9C3E62A7268609CD004805FD /* Capacity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capacity.swift; sourceTree = "<group>"; };
+		9C3E62A926862AA2004805FD /* Challenges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenges.swift; sourceTree = "<group>"; };
 		9CA143572684829F006D0A45 /* PlayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersTableViewCell.swift; sourceTree = "<group>"; };
 		9CC1F41426820FFC00C20B63 /* AddPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerViewController.swift; sourceTree = "<group>"; };
 		9CCF0FD226796A2F009BD8EC /* Dil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dil.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +164,7 @@
 				9CCF100A267971CF009BD8EC /* CoreDataManager.swift */,
 				9CCF100826796B27009BD8EC /* CoreDataStack.swift */,
 				9C3E62A7268609CD004805FD /* Capacity.swift */,
+				9C3E62A926862AA2004805FD /* Challenges.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				9CCF0FE026796A2F009BD8EC /* Dil.xcdatamodeld in Sources */,
 				9C3E62A02684C60F004805FD /* UImage+Rotate.swift in Sources */,
 				9CCF0FD626796A2F009BD8EC /* AppDelegate.swift in Sources */,
+				9C3E62AA26862AA2004805FD /* Challenges.swift in Sources */,
 				9C3E62A62685E0FC004805FD /* GameViewController.swift in Sources */,
 				9CCF0FD826796A2F009BD8EC /* SceneDelegate.swift in Sources */,
 			);

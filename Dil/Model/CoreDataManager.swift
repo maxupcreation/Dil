@@ -32,7 +32,6 @@ final class CoreDataManager {
         let playerI = Players(context: managedObjectContext)
         let data = image.jpegData(compressionQuality: 0.5)
         playerI.picture = data
-       
         playerI.pseudo = pseudo
         coreDataStack.saveContext()
     }
