@@ -26,9 +26,10 @@ class GameViewController: UIViewController {
     @IBOutlet weak var bigChallengeButton: UIButton!
     
     //MARK:- Propreties 📦
-    
+    var coreDataManager : CoreDataManager?
     var dataSeguePlayer : [Players]?
-    let turn = 0
+    var turn = 0
+    let challenge = ChallengesData()
     
     //MARK:- View Cycle ♻️
     
@@ -36,17 +37,30 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         playerManager()
+        gameManager()
         
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+              coreDataManager = CoreDataManager(coreDataStack: appDelegate.coreDataStack)
         
     }
     
     //MARK:- Button Action 🔴
     @IBAction func didTapLittleChallenge(_ sender: Any) {
+        let valuePoint = challenge.littlesChallenges.randomElement()?.value ?? 0
+        coreDataManager?.addPoint(value:valuePoint,index:turn)
+        turn = +1
+        gameManager()
+        playerManager()
         
     }
     
     @IBAction func didTapBigChallenge(_ sender: Any) {
-        
+        let valuePoint = challenge.bigChallenges.randomElement()?.value ?? 0
+        coreDataManager?.addPoint(value:valuePoint,index:turn)
+        turn = +1
+        gameManager()
+        playerManager()
     }
     
     //MARK:- override 🧗
@@ -61,13 +75,12 @@ class GameViewController: UIViewController {
     
     func gameManager(){
         
-        turnLabel.text = String(turn)
+        turnLabel.text = String(turn + 1)
         
-        if turn == 1 {
-            
-        }
-        
-        
+        littleChallengeButton.setTitle(challenge.littlesChallenges.randomElement()?.key, for: .normal)
+        bigChallengeButton.setTitle(challenge.bigChallenges.randomElement()?.key, for: .normal)
+    
+
     }
     
     //MARK:- Interface Gestion 📱

@@ -42,7 +42,11 @@ final class CoreDataManager {
         coreDataStack.saveContext()
     }
     
-    
+    func addPoint(value:Int,index:Int) {
+        let player = players[index]
+        player.score = +1
+        coreDataStack.saveContext()
+    }
     
     
     

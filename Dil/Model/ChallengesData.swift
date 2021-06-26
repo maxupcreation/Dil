@@ -8,8 +8,8 @@ import UIKit
 
 struct ChallengesData {
     
-    let LittlesChallenges = ["Fait du beatbox pendant 30 secondes":5,"":5,]
-    let BigChallenges = [
+    let littlesChallenges = ["Fait du beatbox pendant 30 secondes":5,"Chante une chanson":5]
+    let bigChallenges = [
         "Va voir un(e) inconnu(e) et demande lui son plus beau souvenir":15,
         "Va parler à un groupe de personne inconnu(e) et reste avec eux pendant 15 minutes":20
         
