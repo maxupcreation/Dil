@@ -167,6 +167,7 @@
                     <connections>
                         <outlet property="addPlayersButtonOutlet" destination="RUe-sk-yg9" id="UqZ-oR-rx3"/>
                         <outlet property="playersStackView" destination="2yZ-am-SAC" id="eY1-22-gbN"/>
+                        <outlet property="startGameButton" destination="Wgt-DP-8Zw" id="wF9-Xh-RV7"/>
                         <outlet property="tableView" destination="6fR-Ug-bHo" id="Sac-4w-HmO"/>
                         <segue destination="tLM-zd-zkt" kind="showDetail" identifier="homeToAddPlayer" id="P2p-bs-Jfh"/>
                     </connections>

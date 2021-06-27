@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var addPlayersButtonOutlet: UIButton!
     
+    @IBOutlet weak var startGameButton: UIButton!
     //MARK:- OutLet 🔗
     @IBOutlet weak var playersStackView: UIStackView!
     @IBOutlet weak var tableView: UITableView!
@@ -19,26 +20,31 @@ class ViewController: UIViewController {
     
     //MARK:- Propreties 📦
     
-    //MARK:- View Cycle ♻️
+    //MARK: View Cycle ♻️
     
     override func viewWillLayoutSubviews() {
         tableView.reloadData()
+        startGameManager()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         tableView.reloadData()
+        startGameManager()
     }
     
 override func viewWillAppear(_ animated: Bool) {
     tableView.reloadData()
+    startGameManager()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
+        startGameManager()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        startGameManager()
         
   
         
@@ -59,7 +65,7 @@ override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
         
     }
-    //MARK:- override 🧗
+    //MARK: override 🧗
     
     //— 💡 Supprimer info bar
     override var prefersStatusBarHidden: Bool {
@@ -73,7 +79,7 @@ override func viewWillAppear(_ animated: Bool) {
      }
  
     
-    //MARK:- Button Action 🔴
+    //MARK: Button Action 🔴
     
     @IBAction func addPlayers(_ sender: Any) {
         self.performSegue(withIdentifier: "homeToAddPlayer", sender: (Any).self)
@@ -84,7 +90,21 @@ override func viewWillAppear(_ animated: Bool) {
     
     //MARK:- Conditions☝🏻
     
+    
+    
     //MARK:- Interface Gestion 📱
+    
+    func startGameManager() {
+        let players = coreDataManager?.players.count
+        
+        if players ?? 0 > 1 {
+            startGameButton.isHidden = false
+        }
+        else {
+            startGameButton.isHidden = true
+        }
+        
+    }
     
     //MARK:- Others Func 🍱
     
@@ -99,12 +119,13 @@ override func viewWillAppear(_ animated: Bool) {
     }
     @IBAction func unwindToWelcome(segue:UIStoryboardSegue) { }
 
-//MARK:- Extension ↔️
+//MARK: Extension ↔️
 
 
 }
 
 extension ViewController: UITableViewDataSource{
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -116,7 +137,7 @@ extension ViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
+        startGameManager()
         dataSegue = coreDataManager?.players
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? PlayersTableViewCell else { return UITableViewCell() }
@@ -145,8 +166,11 @@ extension ViewController: UITableViewDataSource{
     }
 func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
     if editingStyle == .delete {
+        
         coreDataManager?.deletePlayer(indexPath : indexPath)
         tableView.deleteRows(at: [indexPath], with: .automatic)
+        
+        startGameManager()
     }
 }
     

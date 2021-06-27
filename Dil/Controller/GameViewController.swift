@@ -31,7 +31,7 @@ class GameViewController: UIViewController {
     var turn = 0
     let challenge = ChallengesData()
     
-    //MARK:- View Cycle ♻️
+    //MARK: View Cycle ♻️
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,11 +41,12 @@ class GameViewController: UIViewController {
         
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-              coreDataManager = CoreDataManager(coreDataStack: appDelegate.coreDataStack)
+        coreDataManager = CoreDataManager(coreDataStack: appDelegate.coreDataStack)
         
     }
     
-    //MARK:- Button Action 🔴
+    //MARK: Button Action 🔴
+    
     @IBAction func didTapLittleChallenge(_ sender: Any) {
         let valuePoint = challenge.littlesChallenges.randomElement()?.value ?? 0
         coreDataManager?.addPoint(value:valuePoint,index:turn)
@@ -63,10 +64,14 @@ class GameViewController: UIViewController {
         playerManager()
     }
     
-    //MARK:- override 🧗
+    //MARK: override 🧗
     
-    //MARK:- Conditions☝🏻
+    
+    
+    //MARK: Managements ☝🏻
+    
     func playerManager(){
+        
         pseudoLabel.text = dataSeguePlayer?[turn].pseudo ?? "noData"
         scoreLabel.text = String(dataSeguePlayer?[turn].score ?? 0)
         capacityLabel.text = dataSeguePlayer?[turn].capacity ?? ""
@@ -79,19 +84,17 @@ class GameViewController: UIViewController {
         
         littleChallengeButton.setTitle(challenge.littlesChallenges.randomElement()?.key, for: .normal)
         bigChallengeButton.setTitle(challenge.bigChallenges.randomElement()?.key, for: .normal)
-    
-
     }
     
-    //MARK:- Interface Gestion 📱
+    //MARK: Interface Gestion 📱
     
-    //MARK:- Others Func 🍱
+    //MARK: Others Func 🍱
     
-    //MARK:- KeyBoard Gestion ⌨️
+    //MARK: KeyBoard Gestion ⌨️
     
-    //MARK:- Animate ⚡️
+    //MARK: Animate ⚡️
     
-    //MARK:- Extension ↔️
+    //MARK: Extension ↔️
     
     
     
