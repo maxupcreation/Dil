@@ -8,6 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //MARK: - Injections
+
+    
+    
     @IBOutlet weak var addPlayersButtonOutlet: UIButton!
     
     @IBOutlet weak var startGameButton: UIButton!
@@ -20,7 +25,7 @@ class ViewController: UIViewController {
     
     //MARK:- Propreties 📦
     
-    //MARK: View Cycle ♻️
+    //MARK: - View Cycle ♻️
     
     override func viewWillLayoutSubviews() {
         tableView.reloadData()
@@ -65,7 +70,7 @@ override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
         
     }
-    //MARK: override 🧗
+    //MARK: - override 🧗
     
     //— 💡 Supprimer info bar
     override var prefersStatusBarHidden: Bool {
@@ -119,7 +124,7 @@ override func viewWillAppear(_ animated: Bool) {
     }
     @IBAction func unwindToWelcome(segue:UIStoryboardSegue) { }
 
-//MARK: Extension ↔️
+//MARK: - Extension ↔️
 
 
 }

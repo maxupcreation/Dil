@@ -9,7 +9,12 @@ import UIKit
 
 class GameViewController: UIViewController {
     
-    //MARK:- OutLet 🔗
+    //MARK: - Injections
+    
+ 
+    
+    
+    //MARK: - OutLet 🔗
     
     @IBOutlet weak var turnLabel: UILabel!
     @IBOutlet weak var pictureImageView: UIImageView!

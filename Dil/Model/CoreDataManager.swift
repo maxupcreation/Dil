@@ -44,7 +44,7 @@ final class CoreDataManager {
     
     func addPoint(value:Int,index:Int) {
         let player = players[index]
-        player.score += 1
+        player.score += Double(value)
         coreDataStack.saveContext()
     }
     

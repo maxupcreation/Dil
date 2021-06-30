@@ -13,6 +13,7 @@
 		9C3E62A62685E0FC004805FD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E62A52685E0FC004805FD /* GameViewController.swift */; };
 		9C3E62A8268609CD004805FD /* Capacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E62A7268609CD004805FD /* Capacity.swift */; };
 		9C3E62AA26862AA2004805FD /* ChallengesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E62A926862AA2004805FD /* ChallengesData.swift */; };
+		9C5F32CE268B88920014DF0D /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F32CD268B88920014DF0D /* GameViewModel.swift */; };
 		9CA143582684829F006D0A45 /* PlayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA143572684829F006D0A45 /* PlayersTableViewCell.swift */; };
 		9CC1F41626820FFC00C20B63 /* AddPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC1F41426820FFC00C20B63 /* AddPlayerViewController.swift */; };
 		9CCF0FD626796A2F009BD8EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF0FD526796A2F009BD8EC /* AppDelegate.swift */; };
@@ -52,6 +53,7 @@
 		9C3E62A52685E0FC004805FD /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		9C3E62A7268609CD004805FD /* Capacity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capacity.swift; sourceTree = "<group>"; };
 		9C3E62A926862AA2004805FD /* ChallengesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesData.swift; sourceTree = "<group>"; };
+		9C5F32CD268B88920014DF0D /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		9CA143572684829F006D0A45 /* PlayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersTableViewCell.swift; sourceTree = "<group>"; };
 		9CC1F41426820FFC00C20B63 /* AddPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerViewController.swift; sourceTree = "<group>"; };
 		9CCF0FD226796A2F009BD8EC /* Dil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dil.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +109,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		9C5F32CC268B88580014DF0D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9C5F32CD268B88920014DF0D /* GameViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		9CCF0FC926796A2F009BD8EC = {
 			isa = PBXGroup;
 			children = (
@@ -130,11 +140,12 @@
 		9CCF0FD426796A2F009BD8EC /* Dil */ = {
 			isa = PBXGroup;
 			children = (
+				9CCF100D26797248009BD8EC /* Supporting files */,
 				9C3E629E2684C5E5004805FD /* Extension */,
 				9CCF100C26797217009BD8EC /* Model */,
-				9CCF100E2679725B009BD8EC /* View */,
+				9C5F32CC268B88580014DF0D /* ViewModel */,
 				9CCF100F26797272009BD8EC /* Controller */,
-				9CCF100D26797248009BD8EC /* Supporting files */,
+				9CCF100E2679725B009BD8EC /* View */,
 			);
 			path = Dil;
 			sourceTree = "<group>";
@@ -193,10 +204,10 @@
 		9CCF100F26797272009BD8EC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9C3E62A52685E0FC004805FD /* GameViewController.swift */,
 				9CCF0FD926796A2F009BD8EC /* ViewController.swift */,
 				9CC1F41426820FFC00C20B63 /* AddPlayerViewController.swift */,
 				9CA143572684829F006D0A45 /* PlayersTableViewCell.swift */,
-				9C3E62A52685E0FC004805FD /* GameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -342,6 +353,7 @@
 				9C3E62A8268609CD004805FD /* Capacity.swift in Sources */,
 				9CC1F41626820FFC00C20B63 /* AddPlayerViewController.swift in Sources */,
 				9CCF100926796B27009BD8EC /* CoreDataStack.swift in Sources */,
+				9C5F32CE268B88920014DF0D /* GameViewModel.swift in Sources */,
 				9CCF0FDA26796A2F009BD8EC /* ViewController.swift in Sources */,
 				9CCF0FE026796A2F009BD8EC /* Dil.xcdatamodeld in Sources */,
 				9C3E62A02684C60F004805FD /* UImage+Rotate.swift in Sources */,
